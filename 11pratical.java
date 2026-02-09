@@ -1,29 +1,30 @@
+import java.util.HashMap;
+import java.util.Map;
 
-public class 11practical {
-    public static void main(String[] args) {
-        int N = 3; 
-        int[] shuffled = new int[N];
+public class Main {
+    public static void main(String[] args) {
+        int N = 5; // Fixed: N must be defined
+        int[] shuffled = new int[N];
 
-for (int b = 0; b < N; b++) {
-for (int r=0; r<N-1; r--){
-int r=shuffled.append(r);
+        // Fixed: Simply filling the array for demonstration
+        for (int b = 0; b < N; b++) {
+            shuffled[b] = b + 1;
+        }
+
+        // Fixed: D must be declared and instantiated
+        Map<String, Integer> D = new HashMap<>();
+        String key1 = "132"; // Renamed to avoid shadowing
+
+        if (!D.containsKey(key1)) {
+            D.put(key1, 1);
+        } else {
+            D.put(key1, D.get(key1) + 1);
+        }
+
+        // Output results
+        for (String key : D.keySet()) {
+            System.out.println(key + ", " + D.get(key));
+        }
+    }
 }
-            shuffled[b] = b + 1;
-        }
 
-        
-        
-        String key = "132";
-if (!D.containsKey(key)) {
-            D.put(key, 1);
-        } else {
-            D.put(key, D.get(key) + 1);
-        }
- for (String key : D.keySet()) {
-            System.out.println(key + ", " + D.get(key));
-        }
-    }
-}
-
-        
-        
